@@ -1,0 +1,13 @@
+tr {
+    color: #F5F5F5;
+    background-color: #e0a800;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+}
+
+th{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform:uppercase;
+    text-align: center;
+}

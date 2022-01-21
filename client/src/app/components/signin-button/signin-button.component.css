@@ -1,0 +1,21 @@
+.btn-block {
+    border-radius: 50px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    border: none ;
+    margin-top: 40px;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    
+
+}
+
+.btn-block:hover,.btn-block:focus,.btn-block:active {
+    
+    color: #e0a800;
+    background-color: #F5F5F5;
+   
+  
+
+}

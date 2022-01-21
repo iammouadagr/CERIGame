@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="row justify-content-center my-3 px-3 question">
+    <app-question [content]="questionContent"> </app-question>
+</div>
+<div class="row justify-content-center my-3 p-8">
+    <countdown #cd [config]="config" format="mm:ss" (event)="handleEvent($event)"></countdown>
+</div>
+
+
+<div class="row justify-content-center my-3 px-3">
+    <div class="btn-group" *ngFor="let option of options">
+        <app-answer-button [option]="option" (click)="onOptionClick(option)">
+        </app-answer-button>
+    </div>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <div class="btn-group">
+        <app-page-button [content]="previousPageButton" (click)="onPreviousPage()"> </app-page-button>
+        <app-page-button [content]="nextPageButton" (click)="onNextPage()"></app-page-button>
+    </div>
+</div>

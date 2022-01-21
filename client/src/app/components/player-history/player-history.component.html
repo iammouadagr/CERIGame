@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<div class="row justify-content-center my-3 px-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Score</th>
+                <th scope="col">Date partie</th>
+                <th scope="col">difficulté</th>
+                <th scope="col">Réponses Correctes</th>
+                <th scope="col">Temps partie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of playerHistory">
+                <th scope="row">{{ row.score }}</th>
+                <td>{{ row.date_jeu }}</td>
+                <td>{{ row.niveau_jeu }}</td>
+                <td>{{ row.nb_reponses_corr}}</td>
+                <td>{{ row.temps}}s</td>
+
+            </tr>
+            <!--- <app-single-player-history-row *ngFor="let row of playerHistory" [row]="row">
+            </app-single-player-history-row>-->
+        </tbody>
+    </table>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <div class="btn-group">
+        <button class="btn btn-info" (click)="onPlayerHistoryClick()">Historique</button>
+        <button class="btn btn-info" (click)="onOverallRankingClick()">Top 10 génerale</button>
+        <button class="btn btn-info" (click)="onSingleRoundRankingClick()">Top 10 meilleur score</button>
+        <button class="btn btn-info" (click)="onLogoutClick()">Se déconnecter</button>
+
+    </div>
+</div>

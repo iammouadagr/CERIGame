@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="row justify-content-center my-3 px-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Rang</th>
+                <th scope="col">Pseudo</th>
+                <th scope="col">Score</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of standings; let rang = index">
+
+                <th scope="row">{{ rang+1}}</th>
+                <td>{{ row.identifiant }}</td>
+                <td>{{ row.bestscore }}</td>
+
+            </tr>
+            <!--<app-single-round-ranking-row *ngFor="let row of standings" [row]="row">
+            </app-single-round-ranking-row>-->
+        </tbody>
+    </table>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <div class="btn-group">
+        <button class="btn btn-info" (click)="onPlayerHistoryClick()">Historique</button>
+        <button class="btn btn-info" (click)="onOverallRankingClick()">Top 10 génerale</button>
+        <button class="btn btn-info" (click)="onSingleRoundRankingClick()">Top 10 meilleur score</button>
+        <button class="btn btn-info" (click)="onLogoutClick()">Se déconnecter</button>
+
+    </div>
+</div>

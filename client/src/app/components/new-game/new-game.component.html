@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<form (ngSubmit)="onSubmit()">
+
+    <div class="row justify-content-center my-3 px-3">
+        <div class="btn-group" *ngFor="let theme of themes">
+            <app-theme-button [theme]="theme" (click)="setTheme(theme)">
+            </app-theme-button>
+        </div>
+    </div>
+
+    <div class="row justify-content-center my-3 px-3">
+        <div class="btn-group">
+            <app-difficulty-button *ngFor="let difficulty of difficulties" [difficulty]="difficulty"
+                (click)="setDifficulty(difficulty)">
+            </app-difficulty-button>
+    
+        </div>
+    </div>
+    
+    <div class="row justify-content-center my-3 px-3">
+        <app-submit-button  [content]="startButton"></app-submit-button>
+    </div>
+
+</form>

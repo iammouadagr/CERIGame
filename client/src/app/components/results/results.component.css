@@ -1,0 +1,10 @@
+.message{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5rem;
+}
+
+.score{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+}

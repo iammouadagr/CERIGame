@@ -1,0 +1,38 @@
+<div class="container px-4 py-5 mx-auto">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-row">
+            <div class="card card1" style="width: 50%;padding: 40px 30px 10px 30px">
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <h2 class="mb-5 text-center form-title">{{ formTitle }}</h2>
+                        <h5 class="lead form-subtitle">{{ formSubtitle }}.</h5>
+                        <form (ngSubmit)="onSubmit()">
+                            <div class="form-group"> <label class="form-control-label text-muted">Identifiant</label>
+                                <input type="text" id="email" name="email" [(ngModel)]="email"
+                                    placeholder="Taper votre pseudo" class="form-control form-input">
+                            </div>
+                            <div class="form-group"> <label class="form-control-label text-muted">mot de
+                                    passe</label>
+                                <input type="password" id="psw" name="psw" [(ngModel)]="psw" placeholder="******"
+                                    class="form-control form-input">
+                            </div>
+                            <div class="row justify-content-center my-3 px-3">
+                                <app-signin-button [content]="signInButton"></app-signin-button>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="card card2" style=" width: 50%; background-image: linear-gradient(to right, #FFD54F, #FF5833)">
+                <div class="my-auto mx-md-5 px-md-5 right">
+                    <img src="//upload.wikimedia.org/wikipedia/fr/thumb/1/14/Universit%C3%A9_d%27Avignon_%28logo_2018%29.svg/langfr-150px-Universit%C3%A9_d%27Avignon_%28logo_2018%29.svg.png"
+                        alt="no image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

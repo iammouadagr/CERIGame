@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="row justify-content-center my-3 px-3">
+    <p class="message">{{ results.message }}</p>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <span class="score">{{ results.score }}</span>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <app-success-button [content]="restart" (click)="onNewGameClick()"></app-success-button>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <div class="btn-group">
+        <button class="btn btn-info" (click)="onPlayerHistoryClick()">Historique</button>
+        <button class="btn btn-info" (click)="onOverallRankingClick()">Top 10 génerale</button>
+        <button class="btn btn-info" (click)="onSingleRoundRankingClick()">Top 10 meilleur score</button>
+        <button class="btn btn-info" (click)="onLogoutClick()">Se déconnecter</button>
+
+    </div>
+</div>

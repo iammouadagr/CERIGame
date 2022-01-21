@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label class="form-control-label text-muted">Ancien mot de passe</label>
+        <input type="password" id="psw" name="psw" [(ngModel)]="psw" class="form-control form-input" />
+        <label class="form-control-label text-muted">Nouveau mot de passe</label>
+        <input type="password" id="formPsw" name="formPsw" [(ngModel)]="formPsw" class="form-control form-input" />
+    </div>
+    <div class="form-group">
+        <label class="form-control-label text-muted">Avatar</label>
+        <input type="text" id="formAvatar" name="formAvatar" [value]="this.avatar" [(ngModel)]="formAvatar"
+            class="form-control form-input" />
+    </div>
+    <div class="form-group">
+        <label class="form-control-label text-muted">Humeur</label>
+        <input type="text" id="formHumor" name="formHumor" [(ngModel)]="formHumor" [value]="this.humor"
+            class="form-control form-input" />
+    </div>
+    <div class="row justify-content-center my-3 px-3">
+        <button class="btn btn-warning btn-block " type="submit">
+            Mettre à jour</button>
+    </div>
+</form>

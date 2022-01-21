@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="row justify-content-center my-3 px-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Pseudo</th>
+                <th scope="col">Score total</th>
+                <th scope="col">Nombre parties</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of standings">
+                <th scope="row">{{ row.username }}</th>
+                <td>{{ row.overall_score }}</td>
+                <td>{{ row.total_rounds }}</td>
+            </tr>
+            <!--<app-overall-ranking-row *ngFor="let row of standings" [row]="row">
+            </app-overall-ranking-row>-->
+        </tbody>
+    </table>
+</div>
+
+<div class="row justify-content-center my-3 px-3">
+    <div class="btn-group">
+        <button class="btn btn-info" (click)="onPlayerHistoryClick()">Historique</button>
+        <button class="btn btn-info" (click)="onOverallRankingClick()">Top 10 génerale</button>
+        <button class="btn btn-info" (click)="onSingleRoundRankingClick()">Top 10 meilleur score</button>
+        <button class="btn btn-info" (click)="onLogoutClick()">Se déconnecter</button>
+
+    </div>
+</div>
